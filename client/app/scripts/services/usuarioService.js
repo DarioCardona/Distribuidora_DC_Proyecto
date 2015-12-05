@@ -1,11 +1,13 @@
 angular.module('AngularScaffold.Services').factory('usuarioService', ['$http',
 	function($http){
 		return {
-				GetStudents: function(){
-					return $http.get("/students");
+				Getusuario: function(){
+					return $http.get("/usuarios");
 				},
-				PostStudents: function(payload){
-					return $http.post("/students", payload);
+				Postusuario: function(payload){
+					console.log(payload);
+					return $http.post("/usuario", payload);
+
 				}
 	    };
 }]);
